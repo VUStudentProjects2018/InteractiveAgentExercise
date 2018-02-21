@@ -1,0 +1,95 @@
+
+# global variables
+aggresive = -1
+neutrual = 0
+polite = 1
+
+
+aggresive_words = ['fucking','shit','fuck'] # 20 words for now
+polite_words = ['please','could','may'] # 20 words for now
+
+class Sentence_checker:
+   words_to_check = []
+
+   def __init__(self, list_words):
+        self.words_to_check = list_words
+
+   def check_sentence (self, sentence):
+        split_to_words = sentence.split(' ')
+        for w in words_to_check:
+            if w in split_to_words
+                  return true
+        return false
+
+
+# do some tests
+
+
+class Individual :
+
+    name = ''
+    conversation_history = []
+    def __init__(self, name):
+         self.name = name
+
+    def print_name (self):
+        print (self.name)
+
+# class inheritance # check youtube videos / tutorials
+
+class Agent (Individual):
+
+    aggresive_checker = Sentence_checker(aggresive_words)
+    polite_checker = Sentence_checker(polite_words)
+    def __init__(self, name, ...):
+      call super class initialiser?
+
+    def check_human_sentence(self, input_sentence):
+          if (aggresive_checker(input_sentence)): # aggresive sentence
+              return -1
+          elif(polite_checker(input_sentence)):
+              return 1
+          else:
+              return 0
+
+# Tests: check that the Agent prints its names
+    def interact_with-_human (self, human):
+        results = []
+        testing_conversation_history = human.conversation_history
+        for sen in testing_conversation_history:
+            results.append(self.check_human_sentence(sen))
+        # analysis of the result before returning it.
+        analysis = sum(results) @ example
+        return results, analysis
+
+    def training (self, human, limit_number ): # 5
+       # for each word, you compute a degree of importance
+       # use collection or dictionary here.
+       for w in self.aggresive_checker.list_words:
+            compute the importance for this word with respect to human.label
+      sort it according to importance
+      # plot 
+      cut the list to top 5
+      update the aggresive_checker
+
+      # do the same for polite words
+
+    def testing (self, human ):
+
+      for sen in human.testing_senstences:
+          compare their labels using your updated check_human_sentence function
+      return a result, analysis
+
+
+class Human (Individual):
+
+      def load_converation(self, 'path_to_csv_file')
+      load the csv at path_to_csv_file
+      take the senteces to conversation_history
+      conversation_history =
+      take the emtion labels to
+      label = []
+
+      def testing_senstences = load from another csv file
+      test_label = []
+      #let the Human interact with the Agent
